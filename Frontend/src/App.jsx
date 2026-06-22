@@ -28,7 +28,7 @@ export default function App() {
     const payload = { name: model, company, year, kms_driven: kmsDriven, fuel_type: fuelType };
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/predict', {
+      const response = await fetch('https://ai-car-valuation-engine-ml-project.onrender.com/predict', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -47,7 +47,7 @@ export default function App() {
       <div className="w-full max-w-2xl bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-2xl">
         
         {/* Header Decorator banner */}
-        <div className="bg-gradient-to-r range from-indigo-600 to-violet-600 px-6 py-8 md:p-10 text-center text-white">
+        <div className="bg-linear-to-r range from-indigo-600 to-violet-600 px-6 py-8 md:p-10 text-center text-white">
           <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
             Car Valuation Engine
           </h1>
